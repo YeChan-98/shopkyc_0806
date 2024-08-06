@@ -1,0 +1,768 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    text-decoration: none;
+}
+ul,ol,li {
+    margin: 0; 
+    padding: 0;}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+#top {
+    width: 100%;
+    height: auto; /* 높이를 자동으로 조정 */
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+}
+
+#etc-img {
+    width: 100px;
+    height: 70px;
+
+    position: absolute; /* 위치를 절대적으로 설정 */
+    top: 0; /* 페이지 상단에 위치 */
+    z-index: 10; /* 다른 요소들 위에 위치하도록 설정 */
+}
+
+
+
+
+
+header {
+    width: 100%;
+    max-width: 1600px; /* 최대 너비를 1600px로 설정 */
+    height: 175px;
+
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
+
+header-top {position: relative;}
+
+#logo {width:150px; 
+    height: 75px; 
+    float: left; 
+    background-color: white; 
+    margin: 45px 00px 0  30px;
+    position:absolute;
+}
+
+#searchbox {
+    width: 450px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #f5f5f5;
+    display: flex; /* Flexbox를 사용하여 아이템을 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    padding: 0 10px; /* 좌우 여백 */
+    position: absolute;
+    margin: 50px 0 0 550px; /* 위치 조정 */
+}
+
+#searchbox input {
+    flex: 1; /* 입력 필드가 버튼과 함께 가로 공간을 채우도록 설정 */
+    height: 100%;
+    border: none; /* 테두리 제거 */
+    border-radius: 30px; /* 모서리 둥글게 설정 */
+    padding: 0 15px; /* 여백 추가 */
+    font-size: 16px; /* 글자 크기 */
+    outline: none; /* 포커스 시 기본 테두리 제거 */
+    background-color: #f5f5f5;
+}
+
+#searchbox button {
+    background: none; /* 버튼 배경 제거 */
+    border: none; /* 버튼 테두리 제거 */
+    cursor: pointer; /* 버튼 클릭 시 커서 모양 변경 */
+    padding: 0 15px; /* 여백 추가 */
+    margin-left: 20px; /* 입력 필드와 버튼 사이의 간격 */
+}
+
+#searchbox button img {
+    width: 28px; /* 검색 아이콘 크기 조정 */
+    height: 28px;
+}
+
+#icon {width: 250px; 
+    height: 50px; 
+
+    margin: 0 0 0 1330px;
+}
+#icon p {font-size: 12px; margin: 10px;}
+
+#icon > a {
+    width: 33px; 
+    height: 33px;
+    margin-top: 50px;
+    margin-left: 25px;
+
+} 
+
+
+nav {
+    width: 100%;
+    max-width: 1600px; /* 최대 너비를 1600px로 설정 */
+    height: 50px;
+   
+    display: flex;
+    margin-top: 120px;
+    margin-left: 530px;
+    position:absolute;
+}
+
+nav > ul { font-size: 17px;}
+nav > ul > li {float: left; margin: 0 33px 20px 36px; color: black; } 
+nav > ul > li > a {text-decoration: none; color: black;}
+
+#etc-img {
+    width:135px; 
+    height: 32px; 
+ 
+    position:absolute;
+    margin: 128px 0 0 1380px ;
+}
+
+
+#slider {
+    width: 100%;
+    max-width: 1600px; /* 최대 너비를 1600px로 설정 */
+    height: 500px;
+    position: relative; /* 자식 요소의 절대 위치를 기준으로 함 */
+
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+}
+
+.slider-content {
+    position: relative; /* 텍스트를 이미지 위에 배치할 기준 요소 */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    
+}
+
+.slider-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 이미지가 부모 요소를 넘지 않게 조정 */
+}
+
+.text-overlay {
+    position: absolute; 
+    top: 0%;
+    left: 15%;
+    width: 100%; /* 너비를 부모 요소와 동일하게 설정 */
+    height: 100%; /* 높이를 부모 요소와 동일하게 설정 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 세로 중앙 정렬 */
+    
+    text-align: left; /* 텍스트 중앙 정렬 */
+    padding: 20px; /* 텍스트와 가장자리 사이의 여백 */
+    box-sizing: border-box; /* 패딩이 요소 크기에 포함되도록 함 */
+}
+
+#text-overlay > p {float: left;}
+
+
+
+
+
+
+
+
+
+section {
+    width: 100%;
+    max-width: 1200px; /* 최대 너비를 1200px로 설정 */
+    height: 7550px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 중앙 정렬 (수평 방향) */
+    position: relative;
+}
+
+section h1 {
+    text-align: center;
+}
+
+#boxs1 > p {
+    font-size: 28px; 
+    text-align: center; 
+    font-weight:bold; 
+    margin: 100px 0 28px 0;
+}
+
+.box {width:240px; 
+    height:420px; 
+    display:inline-block; 
+    margin-left: 20px; 
+    margin-right: 35px; 
+    margin-bottom: 60px; 
+    position: relative;
+}
+
+.box > a > img {
+    width:280px; 
+    height:280px; 
+    border-radius: 20px; 
+    margin-bottom: 20px; 
+    float: left; 
+    position: absolute;
+    }
+
+
+#boxtest {width:280px; height: 130px; margin-top: 300px; position: absolute; }
+
+#boxtest > span > a{text-decoration: none; color: black;}
+
+#boxalways {
+    position: absolute; /* 절대 위치를 사용하여 이미지를 특정 위치에 배치 */
+    top: 9%; /* 상단 기준으로 50% 위치 */
+    left: 104%; /* 좌측 기준으로 50% 위치 */
+    transform: translate(-50%, -50%); /* 중앙 정렬 */
+    transition: opacity 0.3s ease; /* 부드러운 트랜지션 효과 */
+    pointer-events: none; /* 클릭 방지 */
+}
+
+#boxalways2 {
+    position: absolute; /* 절대 위치를 사용하여 이미지를 특정 위치에 배치 */
+    top: 10%; /* 상단 기준으로 50% 위치 */
+    left: 103%; /* 좌측 기준으로 50% 위치 */
+    transform: translate(-50%, -50%); /* 중앙 정렬 */
+    transition: opacity 0.3s ease; /* 부드러운 트랜지션 효과 */
+    pointer-events: none; /* 클릭 방지 */
+}
+
+#boxalways3 {
+    position: absolute; /* 절대 위치를 사용하여 이미지를 특정 위치에 배치 */
+    top: 8%; /* 상단 기준으로 50% 위치 */
+    left: 103%; /* 좌측 기준으로 50% 위치 */
+    transform: translate(-50%, -50%); /* 중앙 정렬 */
+    transition: opacity 0.3s ease; /* 부드러운 트랜지션 효과 */
+    pointer-events: none; /* 클릭 방지 */
+}
+
+#boxhover {
+    position: absolute; /* 절대 위치를 사용하여 이미지를 특정 위치에 배치 */
+    top: 55%; /* 상단 기준으로 50% 위치 */
+    left: 95%; /* 좌측 기준으로 50% 위치 */
+    transform: translate(-50%, -50%); /* 중앙 정렬 */
+    opacity: 0; /* 기본적으로 숨김 상태 */
+    transition: opacity 0.3s ease; /* 부드러운 트랜지션 효과 */
+    pointer-events: none; /* 클릭 방지 */
+}
+
+.box:hover #boxhover {
+    opacity: 1; /* hover 시 이미지가 보이도록 설정 */
+    transition: opacity 0.3s ease;
+}
+
+#boxhover > img {
+    width: 50px; 
+    height: 50px; 
+    transition: opacity 2s ease;
+}
+
+#boxhover2 {
+    position: absolute; /* 절대 위치를 사용하여 이미지를 특정 위치에 배치 */
+    top: 65%; /* 상단 기준으로 50% 위치 */
+    left: 97%; /* 좌측 기준으로 50% 위치 */
+    transform: translate(-50%, -50%); /* 중앙 정렬 */
+    opacity: 0; /* 기본적으로 숨김 상태 */
+    transition: opacity 0.3s ease; /* 부드러운 트랜지션 효과 */
+    pointer-events: none; /* 클릭 방지 */
+}
+
+
+#boxhover2 > img {
+    width: 50px; 
+    height: 50px; 
+    transition: opacity 2s ease;
+}
+
+#boxhover3 {
+    position: absolute; /* 절대 위치를 사용하여 이미지를 특정 위치에 배치 */
+    top: 60%; /* 상단 기준으로 50% 위치 */
+    left: 95%; /* 좌측 기준으로 50% 위치 */
+    transform: translate(-50%, -50%); /* 중앙 정렬 */
+    opacity: 0; /* 기본적으로 숨김 상태 */
+    transition: opacity 0.3s ease; /* 부드러운 트랜지션 효과 */
+    pointer-events: none; /* 클릭 방지 */
+}
+
+
+#boxhover3 > img {
+    width: 50px; 
+    height: 50px; 
+    transition: opacity 2s ease;
+}
+
+#boxhover4 {
+    position: absolute; /* 절대 위치를 사용하여 이미지를 특정 위치에 배치 */
+    top: 60%; /* 상단 기준으로 50% 위치 */
+    left: 95%; /* 좌측 기준으로 50% 위치 */
+    transform: translate(-50%, -50%); /* 중앙 정렬 */
+    opacity: 0; /* 기본적으로 숨김 상태 */
+    transition: opacity 0.3s ease; /* 부드러운 트랜지션 효과 */
+    pointer-events: none; /* 클릭 방지 */
+}
+
+
+#boxhover4 > img {
+    width: 50px; 
+    height: 50px; 
+    transition: opacity 2s ease;
+}
+
+.box:hover > a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 280px;
+    background: rgba(255, 255, 255, 0.5); /* 반투명한 흰색 배경 */
+    border-radius: 20px;
+    transition: opacity 1s ease;
+    pointer-events: none; /* 클릭 방지 */
+}
+
+#boxhover5 {
+    position: absolute; /* 절대 위치를 사용하여 이미지를 특정 위치에 배치 */
+    top: 50%; /* 상단 기준으로 50% 위치 */
+    left: 80%; /* 좌측 기준으로 50% 위치 */
+    transform: translate(-50%, -50%); /* 중앙 정렬 */
+    opacity: 0; /* 기본적으로 숨김 상태 */
+    transition: opacity 0.3s ease; /* 부드러운 트랜지션 효과 */
+    pointer-events: none; /* 클릭 방지 */
+}
+
+#boxhover5 > img {
+    width: 50px; 
+    height: 50px; 
+    transition: opacity 2s ease;
+}
+
+.box3:hover > a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 280px;
+    background: rgba(255, 255, 255, 0.5); /* 반투명한 흰색 배경 */
+    border-radius: 20px;
+    transition: opacity 1s ease;
+    pointer-events: none; /* 클릭 방지 */
+}
+
+.c0 {font-size:15px; color: black; display:block; font-weight:bold; position: relative;}
+
+.c1 {font-size:20px; color:red; position: relative; margin-top: 10px;}
+
+.c2 {font-size:20px; color:#000;  font-weight:bold; position: relative;}
+
+.c3 {font-size:15px; color:#9b9b9b; font-weight:bold; text-decoration-line: line-through; position: relative;}
+
+.c4 {font-size:12px; color:#9b9b9b; display:block; font-weight:bold; position: relative;}
+
+#boximg > img {width: 57px; height: 20px; display:inline; position: relative; margin-top: 10px;}
+
+#boximg2 > img {display:inline; position: relative; margin-top: 10px;}
+
+
+#sectionbanner1 {margin-bottom: 130px;}
+
+
+#boxs2 > p {
+    font-size: 28px; 
+    text-align: center; 
+    font-weight:bold; 
+    margin: 100px 0 28px 0;
+}
+
+.box2 {width:240px; 
+    height:370px; 
+    display:inline-block; 
+    margin-left: 20px; 
+    margin-right: 35px; 
+    margin-bottom: 60px; 
+    position: relative;
+}
+
+.box2 > a > img {
+    width:280px; 
+    height:280px; 
+    border-radius: 20px; 
+    margin-bottom: 20px; 
+    float: left; 
+    position: absolute;
+    }
+
+    .box2:hover #boxhover2 {
+        opacity: 1; /* hover 시 이미지가 보이도록 설정 */
+        transition: opacity 0.3s ease;
+    }
+
+    .box2:hover > a::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 280px;
+        height: 280px;
+        background: rgba(255, 255, 255, 0.5); /* 반투명한 흰색 배경 */
+        border-radius: 20px;
+        transition: opacity 1s ease;
+        pointer-events: none; /* 클릭 방지 */
+    }
+
+   
+    .box3 {width:200px; 
+        height:330px; 
+        display:inline-block; 
+        margin-left: 50px; 
+        margin-right: 0px; 
+        margin-bottom: 60px; 
+        position: relative;
+    }
+    
+    .box3 > a > img {
+        width:210px; 
+        height:210px; 
+        border-radius: 20px; 
+        margin-bottom: 20px; 
+        float: left; 
+        position: absolute;
+        }
+    
+        .box3:hover #boxhover5 {
+            opacity: 1; /* hover 시 이미지가 보이도록 설정 */
+            transition: opacity 0.3s ease;
+        }
+    
+        .box3:hover > a::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 210px;
+            height: 210px;
+            background: rgba(255, 255, 255, 0.5); /* 반투명한 흰색 배경 */
+            border-radius: 20px;
+            transition: opacity 1s ease;
+            pointer-events: none; /* 클릭 방지 */
+        }
+
+        #boxtest3 {width:220px; height: 220px; margin-top: 220px; position: absolute; }
+
+        #boxtest3 > span > a{text-decoration: none; color: black;}
+
+
+
+
+    #boxs3 > p {
+        font-size: 28px; 
+        text-align: center; 
+        font-weight:bold; 
+        margin: 100px 0 28px 0;
+    }
+
+    #boxs4 > p {
+        font-size: 28px; 
+        text-align: center; 
+        font-weight:bold; 
+        margin: 100px 0 28px 0;
+    }
+    
+    #boxs5 > p {
+        font-size: 28px; 
+        text-align: center; 
+        font-weight:bold; 
+        margin: 100px 0 28px 0;
+    }
+
+    .baristatext {
+        text-align: center; 
+        width: 1200px;
+        height: 100px;
+        
+        margin-bottom: 50px;
+
+    }
+
+    .baristatext > a  {
+        
+        border-radius: 30px;
+        background-color: #f5f5f5;
+        text-align: center; 
+        padding: 10px 30px;
+        display: inline-block;
+        margin: 5px;
+        color: black;
+    }
+
+    .baristatext > a.active {
+         /* 클릭 시 배경 색상 변경 */
+        color: white; /* 클릭 시 폰트 색상 변경 */
+    }
+
+    #sectionbanner2 {
+        width: 1200px;
+        height: 200px;
+        
+        float: left;
+    }
+
+    #sectionbanner2 > a {padding: 10px 5px 0 5px;}
+
+
+    #boxs6 > p {
+        font-size: 28px; 
+        text-align: center; 
+        font-weight:bold; 
+        margin: 100px 0 28px 0;
+    }
+
+    #boxs7 > p {
+        font-size: 28px; 
+        text-align: center; 
+        font-weight:bold; 
+        margin: 100px 0 28px 0;
+    }
+
+    #recipebox {
+        width: 100%;
+        height: 580px;
+        
+    }
+
+    #recipe1 {
+        width: 650px;
+        height: 580px;
+        float: left;
+    }
+
+    #recipe1 > img {
+        width: 100%;
+        height: 580px;
+    }
+
+    #recipe2 {
+        width: 550px;
+        height: 240px;
+        float: right;
+        background-color: #f5f5f5;
+        padding: 50px;
+        display: block;
+    }
+    .re1 {
+            font-family: 'Somi', sans-serif, serif;
+            letter-spacing: -0.4rem; 
+            display: block;     
+            text-align: left;  
+    }
+
+    .re2 {
+        font-size: 28px; 
+        text-align: left; 
+        font-weight:bold; 
+        display: block;
+        margin: 10px 0;
+    }
+
+    .re3 {
+        text-align: left; 
+        font-size: 14px;
+        color: gray;
+        display: block;
+    }
+    .re4 {
+        text-align: left;    
+        font-size: 14px;
+        color: gray;
+        margin: 8px 0 0 0;
+        display: block;
+    }
+
+    #recipeproduct {
+        width: 550px;
+        height: 340px;
+        float: right;
+        
+        float: inline-start;
+    }
+
+    #sectionbanner3 {margin: 160px 0;}
+
+    hr {
+        width: 100%;
+        color: #f5f5f5;
+    }
+
+    #cscenter {
+        width: 1200px;
+        height: 300px;
+    
+    }
+    #cscenter1 {
+        width: 520px;
+        height: 300px;
+        float: left;
+        
+        padding: 40px;
+    }
+    #cscenter2 {
+        width: 350px;
+        height: 300px;
+        float: left;
+        
+        padding: 40px;
+    }
+    .cs1 {
+        font-size: 17px;
+        display: block;
+        color: #066754;
+        padding: 5px;
+    }
+    .cs2 {
+        font-size: 22px;
+        font-weight: bold;
+        display: block;
+        color: #066754;
+        padding: 5px;
+    }
+    .cs3 {
+        font-size: 13px;
+        display: block;
+        padding: 3px;
+    }
+    .cs4 {
+        font-size: 17px;
+        position: absolute;
+        margin: -28px 0 0 280px;
+        
+    }
+    .cs5 {
+        width: 100%;
+        font-size: 14px;
+        display: block;
+        float: left;
+        margin: 10px 0 0 15px;
+        ;
+        
+    }
+
+.cs5 > ul > li {
+    color: #9d9d9d;
+    padding: 5px;
+}
+
+    #btns {margin: 0px; position: absolute; margin: -120px 0 0 350px;}
+    #btns > button {
+        width: 110px;
+        height: 40px;
+        display: block; 
+        margin: 10px 0 ;  
+        border-radius: 20px;
+        border: 1px solid #f5f5f5; 
+    } 
+    #btns > button:hover {
+        background-color: #066754; 
+        color: white; 
+        cursor: pointer; 
+        transition: opacity 0.3s ease;
+        border: 1px solid #066754;
+    }
+
+    #vertical-line {
+        width: 1px; /* 세로줄의 두께 */
+        height: 150px; /* 세로줄의 높이 */
+
+        background-color: #9d9d9d; /* 세로줄의 색상 */
+        float: left;
+        margin-top: 40px;
+        
+    }
+
+    footer {
+        width: 100%;
+        max-width: 1200px;
+        height: 310px;
+        background-color: #3b3b3b;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    #footerup {
+        width: 1200px;
+        height: 80px;
+        position: relative;
+        
+    }
+    
+    #footerleft {
+        width: 1200px;
+        height: 80px;
+        display: flex;
+        justify-content: center; /* 수평 중앙 정렬 */
+    }
+    
+    #footerleftimg {
+        display: flex; /* Flexbox 활성화 */
+        align-items: center; /* 수직 중앙 정렬 */
+        margin-right: 90px;
+        margin-left: 40px;
+    }
+    
+    #footerleftimg img {
+
+        margin: 0 5px; /* 이미지 간의 간격 조정 */
+    }
+    #footertext {
+        margin: 30px 350px 0 0;
+    }
+    
+    .f1 {
+        color: white;
+        font-size: 13px;
+        align-items: center; /* 수직 중앙 정렬 */
+        margin: 30px 30px 0 0;
+    }
+
+    #footerdown {
+        margin: 15px 0 0 30px;
+    }
+    .down {
+        display: block;
+        color:#6c6c6c;
+        font-size: 14px;
+        margin: 0 0 4px 0;
+    }
+
+    #footerlogo {
+        width:102px;
+        height: 102px;
+        margin: -130px 0 0 950px;;
+    }
+
+
+
